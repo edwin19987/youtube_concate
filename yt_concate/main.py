@@ -2,6 +2,7 @@
 from pipline.pipline import Pipline
 from pipline.steps.get_video_list import GetVideoList
 from pipline.steps.download_captions import DownloadCaptions
+from pipline.steps.read_caption import ReadCaption
 from pipline.steps.preflight import Preflight
 from pipline.steps.postflight import Postflight
 from utils import Utils
@@ -18,6 +19,7 @@ def main():  # pipline pattern
         Preflight(),
         GetVideoList(),
         DownloadCaptions(),
+        ReadCaption(),
         Postflight()
     ]
     utils = Utils()

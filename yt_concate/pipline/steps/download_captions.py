@@ -27,7 +27,7 @@ class DownloadCaptions(Step):
                 print('the video does not have caption')
                 continue            
             # save the caption to a file named Output.txt
-            text_file = open(utils.get_caption_path(url), "w",encoding='utf-8')
+            text_file = open(utils.get_caption_filepath(url), "w",encoding='utf-8')
             text_file.write(en_caption_convert_to_srt)
             text_file.close()
                 # break  #測試，寫完第一個就停
